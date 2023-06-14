@@ -1,0 +1,205 @@
+@import url(https://fonts.googleapis.com/css?family=Yellowtail:regular);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+
+:root {
+	--primary: #7eb693;
+	--white: hwb(0 100% 0%);
+	--dark: #274c5b;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	text-decoration: none;
+	list-style: none;
+	font-family: roboto, sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+.container {
+	max-width: calc(1380px + 30px);
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+	.container {
+		max-width: 970px;
+	}
+}
+@media (max-width: 992px) {
+	html {
+		font-size: 14px;
+	}
+}
+@media (max-width: 767px) {
+	.container {
+		max-width: none;
+	}
+}
+
+.arrow-btn {
+	margin-top: 30px;
+	padding: 25px 33px;
+	background: #efd372;
+	color: var(--dark);
+	font-size: 19px;
+	line-height: 32px;
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	border-radius: 16px;
+	cursor: pointer;
+	transition: all 100ms linear;
+
+	&:hover {
+		background: #333;
+		color: var(--primary);
+	}
+}
+
+.sub-title {
+	font-family: yellowtail;
+	font-size: 36px;
+	line-height: 64px;
+	letter-spacing: 0.36px;
+	color: var(--primary);
+}
+
+// ========================
+
+.logo {
+	width: 200px;
+}
+
+.navbar {
+	background: var(--white);
+	padding: 40px 0;
+	position: relative;
+	z-index: 1000;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+	}
+
+	&__list {
+		display: flex;
+		gap: 40px;
+
+		@media screen and (max-width: 938px) {
+			background: var(--white);
+			padding: 1.5rem 0;
+			border-top: 1px solid var(--dark);
+			border-bottom: 1px solid var(--dark);
+			position: absolute;
+			top: calc(100% + 40px);
+			left: 0;
+			width: 100%;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		a {
+			font-size: 19px;
+			font-weight: normal;
+			line-height: 32px;
+			letter-spacing: 0.36px;
+			transition: color 100ms linear;
+			color: var(--dark);
+
+			&:hover {
+				color: var(--primary);
+			}
+		}
+	}
+
+	&__cart {
+		padding: 7px 11px;
+		border: 1px solid #d4d4d4;
+		border-radius: 33px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+
+		img {
+			width: 56px;
+		}
+
+		p {
+			font-size: 17px;
+			line-height: 28px;
+			color: var(--dark);
+		}
+	}
+}
+
+// ============================ >>> HEADER
+@import './components/header.scss';
+
+// ============================ >>> CARDS
+@import './components/cards.scss';
+
+// ============================ >>> ABOUT
+@import './components/about.scss';
+
+// ============================ >>> PRODUCTS
+@import './components/products.scss';
+
+// ============================ >>> TESTIMONIAL
+@import './components/testimonial.scss';
+
+// ============================ >>> OFFER
+@import './components/offer.scss';
+
+// ============================ >>> ECO
+@import './components/eco.scss';
+
+// ============================ >>> FOOD
+@import './components/food.scss';
+
+// ============================ >>> NEWS
+@import './components/news.scss';
+
+// ============================ >>> NEWSLETTER
+@import './components/newsletter.scss';
+
+// ============================ >>> FOOTER
+@import './components/footer.scss';
+
+.copyright {
+	small {
+		display: block;
+		padding: 21px 0 27px;
+		background: var(--white);
+		border-top: 1px solid #d5d5d5;
+		color: var(--dark);
+		text-align: center;
+		font-size: 18px;
+		line-height: 28px;
+
+		span {
+			color: #525c60;
+			line-height: 32px;
+		}
+	}
+}

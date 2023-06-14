@@ -1,0 +1,143 @@
+.news {
+	padding: 130px 0 230px;
+
+	&__sub-title {
+		position: relative;
+		top: 27px;
+	}
+
+	&__line {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media screen and (max-width: 830px) {
+			margin-top: 2rem;
+			flex-flow: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__title {
+		font-size: 45px;
+		font-weight: bold;
+		line-height: 58px;
+		color: var(--dark);
+	}
+
+	&__btn {
+		background: none;
+		border: 1px solid var(--dark);
+	}
+
+	&__box {
+		margin-top: 100px;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(300px, 1fr));
+		gap: 30px;
+
+		@media screen and (max-width: 870px) {
+			grid-template-columns: minmax(300px, 600px);
+			justify-content: center;
+			gap: 9rem;
+		}
+	}
+
+	&__item {
+		border-radius: 30px;
+		width: 100%;
+		padding: 90px 30px;
+		position: relative;
+
+		@media screen and (max-width: 870px) {
+			padding: 30px 30px;
+		}
+
+		> img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
+		}
+
+		@media screen and (max-width: 1200px) {
+			&:first-child .news__content {
+				min-height: 440px;
+
+				@media screen and (max-width: 870px) {
+					min-height: auto;
+				}
+			}
+		}
+	}
+
+	&__content {
+		padding: 50px;
+		border-radius: 30px;
+		background: var(--white);
+		position: relative;
+		top: 162px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+		@media screen and (max-width: 870px) {
+			top: 100px;
+		}
+
+		button {
+			display: block;
+			cursor: pointer;
+			margin-top: 10px;
+			padding: 10px 0;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			font-size: 20px;
+			line-height: 28px;
+			color: var(--dark);
+			background: none;
+		}
+	}
+
+	&__user {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+
+		p {
+			color: var(--dark);
+			font-size: 17px;
+			line-height: 23px;
+			font-weight: 400;
+		}
+	}
+
+	&__tag {
+		margin-top: 12px;
+		font-size: 25px;
+		font-weight: bold;
+		line-height: 35px;
+		color: var(--dark);
+		letter-spacing: 0.36px;
+		white-space: nowrap;
+
+		@media screen and (max-width: 1430px) {
+			white-space: normal;
+		}
+	}
+
+	&__description {
+		margin-top: 40px;
+		font-family: 'open sans';
+		font-size: 18px;
+		line-height: 32px;
+		letter-spacing: 0.36px;
+		color: #525c60;
+	}
+}
+.container {
+}
+.sub-title {
+}
